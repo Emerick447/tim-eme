@@ -55,6 +55,7 @@ function createPage() {
         <a href="https://facebook.com" target="_blank">Facebook</a> |
         <a href="https://linkedin.com" target="_blank">LinkedIn</a>
       </p>
+      <a href="https://github.com/Emerick447/tim-eme/tree/main/jsDOM"></a>
     `);
 
     app.appendChild(nav);
