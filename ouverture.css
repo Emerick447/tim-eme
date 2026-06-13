@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(4, 0, 255);
+    text-align: center;
+    border: 3px solid rgb(255, 0, 149);
+    margin-top: 50px;
+    margin-left: 340px;
+    margin-right: 340px;
+    
+}
+body h2{
+    font-size: 30px;
+    text-decoration: underline;
+    
+}
+body button{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(74, 0, 109);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+body button:hover{
+    background-color: rgb(31, 184, 11);
+}
+body select{
+    cursor: pointer;
+    background-color: rgb(71, 218, 255);
+}

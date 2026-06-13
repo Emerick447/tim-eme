@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(177, 68, 68);
+    text-align: center;
+}
+body img{
+    margin: auto;
+}
+body div{
+    display: flex;
+    margin-left: 400px;
+    justify-content: space-between;
+    margin-right: 400px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question importante</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #non {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Je t'aime, et toi ? ❤️</h2>
+
+  <button onclick="envoyerOui()">Oui</button>
+  <button id="non" onmouseover="fuir()">Non</button>
+
+  <script>
+    function envoyerOui() {
+      let numero = "33652373382"; //
+      let message = "Oui";
+
+      let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    }
+
+    function fuir() {
+      let bouton = document.getElementById("non");
+
+      let x = Math.random() * (window.innerWidth - 100);
+      let y = Math.random() * (window.innerHeight - 50);
+
+      bouton.style.left = x + "px";
+      bouton.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>

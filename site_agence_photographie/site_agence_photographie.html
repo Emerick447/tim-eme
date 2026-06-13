@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site_agence_photographie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photographie</title>
+</head>
+<body>
+    <header>
+       <nav id="nav" class="nav">
+        <h1>Fotogua</h1>
+        <ul>
+            <li><i class="far fa-arrow-alt-circle-right"></i> Contact</li>
+            <li><i class="far fa-arrow-alt-circle-right"></i> Valeurs</li>
+            <li id="label" onclick="showNav()"><i class="fas fa-bars"></i></li>
+        </ul>
+       </nav>
+       <h1>
+            Sauvegardez votre vie,<br>
+            et vos moments préférés en photos
+        </h1>
+        <button><i class="fas fa-arrow-alt-circle-down"></i>Scrollez pour en savoir plus</button>
+        <section class="small-cards">
+            <div class="small-card" id="sc1">
+                <h4>Architecture</h4>
+                <p>Services de photos</p>
+            </div>
+            <div class="small-card" id="sc2">
+                <h4>Entreprise</h4>
+                <p>Photos d'événements</p>
+            </div>
+            <div class="small-card" id="sc3">
+                <h4>Restaurants</h4>
+                <p>Photos de nourritures</p>
+            </div>
+            <div class="small-card" id="sc4">
+                <h4>Personnels</h4>
+                <p>Mariages, anniversaires</p>
+            </div>
+        </section>
+    </header>
+    <section class="content">
+        <section class="testimonials">
+            <div class="testimonial">
+                <i class="fas fa-quote-left"></i>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in libero id eros tincidunt aliquam.</h2>
+                <p class="author">Patrick Lebogos</p>
+                <small>par le PDG de UdL</small>
+            </div>
+        </section>
+        <section class="presentation-cards">
+            <div class="presentation-card">
+                <img src="https://img.magnific.com/photos-premium/ordinateur-bureau-clavier-souris_488220-417.jpg?semt=ais_hybrid&w=740&q=80" alt="proffessionnel">
+                <div class="card-content">
+                    <h3>Tout professionnel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida hendrerit sapien, ac faucibus risus dignissim non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent varius turpis eget mauris condimentum lobortis. Morbi congue porttitor fringilla. Nulla id semper mauris, ac dapibus augue. Fusce in dapibus mi. Suspendisse id mauris enim.</p>
+                </div>
+            </div>
+            <div class="presentation-card">
+                <img src="https://www.lespauline.com/wp-content/uploads/2017/02/VENISE-CANAL.jpg" alt="perfection">
+                <div class="card-content">
+                    <h3>Tout à la perfection</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida hendrerit sapien, ac faucibus risus dignissim non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent varius turpis eget mauris condimentum lobortis. Morbi congue porttitor fringilla. Nulla id semper mauris, ac dapibus augue. Fusce in dapibus mi. Suspendisse id mauris enim.</p>
+                </div>
+            </div>
+            <div class="presentation-card">
+                <img src="https://tignes.cache.ephoto.fr/link/3c9igq/aei1cefnt3fiu80.jpg" alt="gratuit">
+                <div class="card-content">
+                    <h3>Tout presque gratuit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida hendrerit sapien, ac faucibus risus dignissim non. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </div>
+            </div>
+        </section>
+        <section class="values-presentation">
+            <h1>Nous sommes fiers de nos valeurs</h1>
+            <div class="values">
+                <h1>#Qualité</h1>
+                <h1>#Moderne</h1>
+                <h1>#Simple</h1>
+                <h1>#Artistique</h1>
+                <h1>#Force</h1>
+                <h1>#Créativité</h1>
+                <h1>#Réalisme</h1>
+                <h1>#Discrétion</h1>
+                <h1>#Perfectionnisme</h1>
+                <h1>#EtBienD'Autres</h1>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <div class="column">
+            <h3>Évènements</h3>
+            <p>Festival de la photo</p>
+            <p>Ouverture à Nantes</p>
+            <p>Paris 2023</p>
+        </div>
+        <div class="column">
+            <h3>Recrutement</h3>
+            <p>Faire un stage</p>
+            <p>Alternance</p>
+            <p>Postuler CDD</p>
+            <p>Postuler CDI</p>
+        </div>
+        <div class="column">
+            <h3>Entreprise</h3>
+            <p>Chiffre d'affaires</p>
+            <p>Mentions légales</p>
+            <p>Société annexe</p>
+        </div>
+        <div class="column">
+            <h3>Réseaux</h3>
+            <p>Instagram</p>
+            <p>Facebook</p>
+            <p>LinkedIn</p>
+        </div>
+    </footer>
+    <script>
+        function showNav() {
+            var x = document.getElementById('nav');
+            if(x.className === 'nav'){
+                x.className += ' show';
+            }else{
+                x.className = 'nav';
+            }
+        }
+    </script>
+</body>
+</html>

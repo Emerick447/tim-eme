@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  background-color: #000;
+  border: 3px solid #fff;
+  width: 60vw;
+  aspect-ratio: 16/9;
+}
+
+.logo {
+  width: 12vw;
+  height: auto;
+  position: relative;
+  transition: all linear;
+  top: 0;
+  left: 0;
+}

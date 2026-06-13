@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>DVD Bounce</title>
+
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+#dvd {
+    position: absolute;
+    width: 220px;
+    /* Supprime la rotation si tu veux le logo droit */
+     
+    /* transform-origin: center center; */
+}
+  </style>
+</head>
+
+<body>
+
+<img id="dvd" src="https://i.postimg.cc/sfGtt06v/logo-DVD-removebg-preview2.png">
+
+<script src="DVD_BOUNCE.js">
+  const dvd = document.getElementById("dvd");
+
+// Position initiale aléatoire
+let x = Math.random() * (window.innerWidth - dvd.offsetWidth);
+let y = Math.random() * (window.innerHeight - dvd.offsetHeight);
+
+// Vitesse réduite pour un mouvement plus lent
+let speedX = 2;  // Au lieu de 6
+let speedY = 2;  // Au lieu de 6
+
+function randomColor() {
+    return Math.floor(Math.random() * 360);
+}
+
+function animate() {
+    x += speedX;
+    y += speedY;
+
+    // Rebond sur les bords gauche/droite
+    if (x + dvd.offsetWidth >= window.innerWidth || x <= 0) {
+        speedX = -speedX;
+        dvd.style.filter = `hue-rotate(${randomColor()}deg)`;
+    }
+
+    // Rebond sur les bords haut/bas
+    if (y + dvd.offsetHeight >= window.innerHeight || y <= 0) {
+        speedY = -speedY;
+        dvd.style.filter = `hue-rotate(${randomColor()}deg)`;
+    }
+
+    dvd.style.left = x + "px";
+    dvd.style.top = y + "px";
+
+    requestAnimationFrame(animate);
+}
+
+// Lance une seule fois l'animation
+animate();
+</script>
+
+</body>
+</html>

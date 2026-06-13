@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>formulaire</title>
+    </head>
+    <body>
+        <form>
+            <p><label for="prénom">Prénom</label>
+            <input type="text" id="prénom" name="prénom" value="Anthony" placeholder="Entrez votre prénom..."></form></p>
+            <p><label for="e-mail">E-mail</label>
+            <input type="e-mail" id="e-mail" name="e-mail" value="" placeholder="Entrez votre e-mail..."></p>
+            <p><label for="pass">Mot de passe</label>
+            <input type="password" id="pass" name="pass" value="" placeholder="Entrez votre mot de passe..."></p>
+            <p><label for="pass">Nombre</label>
+            <input type="number" id="pass" name="pass" value="" placeholder="Entrez un nombre..."></p>
+            <p><label for="chat">Chat</label>
+            <input type="checkbox" id="chat" name="animal" value="chat"></p>
+            <p><label for="chien">Chien</label>
+            <input type="checkbox" id="chien" name="animal" value="chien"></p>
+            <p><label for="tortue">Tortue</label>
+            <input type="checkbox" id="tortue" name="animal" value="tortue"></p>
+            <p><label for="chat">Chat</label>
+            <input type="radio" id="chat" name="animal" value="chat"></p>
+            <p><label for="chien">Chien</label>
+            <input type="radio" id="chien" name="animal" value="chien"></p>
+            <p><label for="tortue">Tortue</label>
+            <input type="radio" id="tortue" name="animal" value="tortue"></p>
+            <p><label for="pays">Pays</label>
+            <select id="pays" name="pays">
+                <option value="">Tous les pays</option>
+                <option value="fr">France</option>
+                <option value="de">Allemagne</option>
+                <option value="it">Italie</option>
+            </select></p>
+            <p><label for="texte">Votre message</label>
+            <textarea id="texte">Entrez votre message ici... </textarea></p>
+            <p><label for="date">Date</label>
+            <input id="date" type="datetime-local"></p>
+            <input type="hidden" id="token" value="123456">
+            <input type="submit" name="ok" value="Envoyer mes réponses">
+        </form>
+    </body>

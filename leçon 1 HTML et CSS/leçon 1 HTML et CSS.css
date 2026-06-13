@@ -1,0 +1,76 @@
+p, h1 {
+    color: rgb(10, 111, 10);
+}
+
+.ma-classe {
+    color: black;
+}
+
+.ma-classe-2 {
+    color: deeppink;
+    font-weight: 700;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    font-style: italic;
+    margin: 50px;
+    padding: 2px;
+}
+
+h1, h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+body {
+    background-image: url(https://thumbs.dreamstime.com/b/beaucoup-d-oiseaux-dans-le-ciel-117341113.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img {
+    border:  solid 5px black ;
+    border-radius: 200px;
+    box-shadow: 6px 6px 15px rgb(29, 49, 63);
+}
+
+img:hover {
+    opacity: 0.95;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+a:active {
+    text-decoration-color: red;
+}
+
+a:focus {
+    background-color: grey;
+    color: white;
+    outline-color: deeppink;
+}
+
+a {
+    border: solid 2px greenyellow;
+}
+
+img:hover + h2 {
+    color: brown;
+}
+
+.zone-txt {
+    margin: auto;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+    
+</head>
+<body>
+
+    <h2>Calculatrice</h2>
+
+    <input type="number" id="nb1" placeholder="Premier nombre">
+
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+    </select>
+
+    <input type="number" id="nb2" placeholder="Deuxième nombre">
+
+<button onclick="calculer()">Calculer</button>
+
+    <p>Résultat : <span id="resultat">?</span></p>
+
+    <script>
+        function calculer() {
+            let a = parseFloat(document.getElementById("nb1").value);
+            let b = parseFloat(document.getElementById("nb2").value);
+            let op = document.getElementById("operation").value;
+            let resultat;
+
+            switch(op) {
+                case "+":
+                    resultat = a + b;
+                    break;
+                case "-":
+                    resultat = a - b;
+                    break;
+                case "*":
+                    resultat = a * b;
+                    break;
+                case "/":
+                    resultat = b !== 0 ? a / b : "Erreur : division par 0";
+                    break;
+            }
+
+            document.getElementById("resultat").textContent = resultat;
+        }
+    </script>
+
+</body>
+</html>

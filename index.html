@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="ouverture.css">
+    <title>Ouverture de fichier</title>
+</head>
+<body>
+    
+    <h2>Choisissez un fichier :</h2>
+
+    <select id="fichier">
+        <option value="IMG:IMG/71d84da1-ebdb-49a6-a1e2-75936c03475f.AVIF">image</option>
+        <option value="IMG:IMG/image de tim.jpg">image de tim</option>
+        <option value="HTML:site_agence_photographie/site_agence_photographie.html">site_agence_photographie, HTML</option>
+        <option value="CSS:site_agence_photographie/site_agence_photographie.css">site_agence_photographie, CSS</option>
+        <option value="HTML:site_web_amélioré/site_web_amélioré.html">site_web_amélioré, HTML</option>
+        <option value="CSS:site_web_amélioré/site_web_amélioré.css">site_web_amélioré, CSS</option>
+        <option value="HTML:Netflix/Netflix.html">Netflix, HTML</option>
+        <option value="CSS:Netflix/Netflix.css">Netflix, CSS</option>
+        <option value="HTML:page de connexion/Page_de_connexion.html">page_de_connexion, HTML</option>
+        <option value="CSS:page de connexion/style.css">page_de_connexion, CSS</option>
+        <option value="HTML:ma_page_web2/ma_page_web2.html">ma_page_web2, HTML</option>
+        <option value="CSS:ma_page_web2/ma_page_web2.css">ma_page_web2, CSS</option>
+        <option value="HTML:mon_site_web/VenteDeSiteWeb.html">VenteDeSiteWeb, HTML</option>
+        <option value="CSS:mon_site_web/VenteDeSiteWeb.css">VenteDeSiteWeb, CSS</option>
+        <option value="HTML:circle/circle.html">circle, HTML</option>
+        <option value="CSS:circle/circle.css">circle, CSS</option>
+        <option value="HTML:jsDOM/jsDOM.html">jsDOM, HTML</option>
+        <option value="CSS:jsDOM/jsDOM.css">jsDOM, CSS</option>
+        <option value="JAVA:jsDOM/jsDOM.js">jsDOM, JS</option>
+        <option value="HTML:test HTML_CSS/test html.html">test HTML_CSS, HTML</option>
+        <option value="CSS:test HTML_CSS/test css.css">test HTML_CSS, CSS</option>
+        <option value="HTML:leçon 1 HTML et CSS/leçon 1 HTML et CSS.html">leçon 1 HTML et CSS, HTML</option>
+        <option value="CSS:leçon 1 HTML et CSS/leçon 1 HTML et CSS.css">leçon 1 HTML et CSS, CSS</option>
+        <option value="HTML:pptés_background/Comment bien utiliser les propriétés CSS background.html">pptés_background, HTML</option>
+        <option value="CSS:pptés_background/Comment bien utiliser les propriétés CSS background.css">pptés_background, CSS</option>
+        <option value="HTML:sans CSS/anniversaire_maman.html">anniversaire maman, HTML</option>
+        <option value="HTML:sans CSS/formulaire.html">formulaire, HTML</option>
+        <option value="HTML:sans CSS/les insectes.html">les insectes, HTML</option>
+        <option value="HTML:sans CSS/index.html">Question importante, HTML</option>
+        <option value="PYTHON:Pythons/Suites/script.py">suite_escalier, PYTHON</option>
+        <option value="PYTHON:Pythons/Suites/script 2.py">suite_escalier_graphique, PYTHON</option>
+        <option value="PYTHON:Pythons\Degrés Celsus degrés farhenheit.py">celsus_farhenheit, PYTHON</option>
+        <option value="HTML:Mini IA E/index.html">mini IA,HTML</option>
+        <option value="HTML:TROLL/troll.html">TROLL, HTML</option>
+        <option value="CSS:TROLL/troll.css">TROLL, CSS</option>
+        <option value="MP3:TROLL/miaw-miaw-miaw.mp3">TROLL, MP3</option>
+        <option value="APP:APPS/EXE/Assistant Vocal.exe">Assistant Vocal, APP</option>
+        <option value="HTML:louise attaque/index.html">louise attaque, HTML</option>
+        <option value="CSS:louise attaque/style.css">louise attaque, CSS</option>
+        <option value="IMG:louise attaque/Icone.png">louise attaque, IMG</option>
+        <option value="HTML:Prof de math/index.html">Prof de math, HTML</option>
+        <option value="HTML:i_carrotte/i_carotte.html">i_carrotte, HTML</option>
+        
+    </select>
+
+    <br><br>
+
+    <button onclick="acces()">Ouvrir</button>
+
+    <p id="resultat"></p>
+
+    <script>
+
+        function HTML(fichier) {
+            document.getElementById("resultat").innerText =
+                "Ouverture HTML : " + fichier;
+		window.open(fichier);
+        }
+
+        function PYTHON(fichier) {
+            document.getElementById("resultat").innerText =
+                "Ouverture Python : " + fichier;
+		window.open(fichier);
+        window.open('https://console.basthon.fr/');
+        }
+
+        function JAVA(fichier) {
+            document.getElementById("resultat").innerText =
+                "Ouverture Java : " + fichier;
+		window.open(fichier);
+        }
+
+        function CSS(fichier) {
+            document.getElementById("resultat").innerText =
+                "Ouverture CSS : " + fichier;
+		window.open(fichier);
+        }
+
+        function IMG(fichier) {
+            document.getElementById("resultat").innerText =
+                "Ouverture Image : " + fichier;
+		window.open(fichier);
+        }
+
+        function APP(fichier) {
+            document.getElementById("resultat").innerText =
+                "Ouverture Application : " + fichier;
+		window.open(fichier);
+        }
+        function MP3(fichier) {
+            document.getElementById("resultat").innerText =
+                "Ouverture Fichier MP3 : " + fichier;
+		window.open(fichier);
+        }
+
+        function acces() {
+
+            var choix = document.getElementById("fichier").value;
+
+            // séparation LANGAGE:FICHIER
+            var parts = choix.split(":");
+            var langage = parts[0];
+            var fichier = parts[1];
+
+            switch (langage) {
+
+                case 'HTML':
+                    HTML(fichier);
+                    break;
+
+                case 'PYTHON':
+                    PYTHON(fichier);
+                    break;
+
+                case 'JAVA':
+                    JAVA(fichier);
+                    break;
+
+                case 'CSS':
+                    CSS(fichier);
+                    break;
+
+                case 'IMG':
+                    IMG(fichier);
+                    break;
+                    
+                case 'MP3':
+                    MP3(fichier);
+                    break;
+	   
+                case 'APP':
+                    APP(fichier);
+                    break; 
+
+                default:
+                    document.getElementById("resultat").innerText =
+                        "Langage inconnu";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

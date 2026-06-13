@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(53, 67, 63);
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 25px;
+}
+header ul li{
+    text-decoration: none;
+    margin: 20px;
+    font-size: 25px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color: rgb(17, 172, 215);
+}
+header h1{
+    margin: 20px;
+    padding: 10px;
+    color: white;
+}
+header ul li a:hover{
+    color: #ccc;
+}
+header h1:hover{
+    font-size: 34px;
+}
+
+main{
+    margin-top: 0;
+    background-image: url('https://img-4.linternaute.com/27eK8rGC0nnKKCGtWS65HiB9oE8=/1500x/smart/0f0f978005864ef39257cac16bacfec5/ccmcms-linternaute/33523985.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 150vh;
+    width: 100%;
+    margin-bottom: 0px;
+}
+main h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 0;
+    padding-top: 400px;
+    font-size: 30px;
+    text-decoration: wavy underline black;
+}
+
+footer{
+    margin: 0;
+    margin: 0;
+    padding: 40px 30px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+
+}
+footer h2{
+    margin: 0px;
+}
+footer{
+    margin: 0;
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
+}
+footer h2{
+    text-align: center;
+    color: white;
+}

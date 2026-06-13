@@ -1,0 +1,23 @@
+.container{
+    width: 90%;
+    height: ;
+    border: dotted 15px black;
+}
+
+h2{
+    font-size: 60px;
+    text-align: center;
+    color: red;
+}
+
+div{
+    background-image: url(https://www.publicdomainpictures.net/pictures/410000/velka/image-1628363303SOP.jpg);
+    background-size: 80%;
+    background-attachment: fixed;
+    background-clip: ;
+    -webkit-background-clip: ;
+    color: ;
+    background-position: ;
+    background-repeat: ;
+    background-origin: ;
+}

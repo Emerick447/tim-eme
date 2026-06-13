@@ -1,0 +1,71 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000;
+}
+
+header a img{
+    max-height: 100px; 
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.accueil{
+    height: 100vh;
+    background-image: url("../images/évolution.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.content{
+    max-width: 600px;
+}
+
+.expérience{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.welcome{
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+}
+
+button{
+    padding: 20px;
+    color: #fff;
+    background-color: goldenrod;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+button:hover{
+    background-color: gold;
+}

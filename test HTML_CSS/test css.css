@@ -1,0 +1,11 @@
+body{
+    background-image: url(https://bigmedia.bpifrance.fr/sites/default/files/styles/bigmedia_article/public/2022-01/shutterstock_332455154.jpg?itok=9KC05tk8);
+}
+p, h1{
+    color: turquoise;
+    text-align: center;
+}
+
+.zone-txt{
+    backdrop-filter: blur(20px);
+}

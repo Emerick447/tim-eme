@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ActuLive</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+header{
+    background:#1a73e8;
+    color:white;
+    padding:20px;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.alerte{
+    background:#ffeb3b;
+    padding:15px;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.carte{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.carte img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.carte h2{
+    margin:15px;
+}
+
+.carte p{
+    margin:15px;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+📰 ActuLive
+</header>
+
+<div class="alerte">
+🔥 Il fait trop chaud, la prof de math va arrêter de bouger !
+</div>
+
+<div class="container">
+
+<div class="carte">
+<img src="https://picsum.photos/600/400?1">
+<h2>Technologie</h2>
+<p>Les nouvelles innovations en robotique continuent de progresser.</p>
+</div>
+
+<div class="carte">
+<img src="https://picsum.photos/600/400?2">
+<h2>Science</h2>
+<p>Des chercheurs étudient les effets des fortes chaleurs.</p>
+</div>
+
+<div class="carte">
+<img src="https://picsum.photos/600/400?3">
+<h2>Espace</h2>
+<p>Une nouvelle mission spatiale est prévue pour cette année.</p>
+</div>
+
+<div class="carte">
+<img src="https://picsum.photos/600/400?4">
+<h2>Sport</h2>
+<p>Les compétitions se poursuivent malgré la météo estivale.</p>
+</div>
+
+<div class="carte">
+<img src="https://picsum.photos/600/400?5">
+<h2>Jeux vidéo</h2>
+<p>Plusieurs nouveaux jeux sont attendus prochainement.</p>
+</div>
+
+<div class="carte">
+<img src="https://picsum.photos/600/400?6">
+<h2>Culture</h2>
+<p>Les festivals attirent de nombreux visiteurs cet été.</p>
+</div>
+
+</div>
+
+</body>
+</html>
