@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Distance entre deux points</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f2f2f2}
+canvas{border:2px solid #000;background:#fff}
+button,select{padding:8px;margin:4px}
+#resultat{max-width:800px;margin:15px auto;background:#fff;padding:15px;text-align:left}
+</style>
+</head>
+<body>
+<h1>Distance entre deux points</h1>
+
+<canvas id="graph" width="900" height="650"></canvas><br>
+
+<button onclick="zoom+=10;dessiner()">Zoom +</button>
+<button onclick="if(zoom>15){zoom-=10;dessiner()}">Zoom -</button>
+<button id="modeBtn" onclick="toggleMode()">Mode précis : ACTIVÉ</button>
+
+<label>Précision :</label>
+<select id="precision" onchange="dessiner()">
+<option value="1">1</option>
+<option value="0.5">0.5</option>
+<option value="0.25">0.25</option>
+<option value="0.1" selected>0.1</option>
+<option value="0.05">0.05</option>
+<option value="0.01">0.01</option>
+</select>
+
+<button onclick="calculer()">Calculer la distance entre les deux points</button>
+
+<div id="resultat"></div>
+
+<script>
+const canvas=document.getElementById("graph");
+const ctx=canvas.getContext("2d");
+
+let zoom=50;
+let modePrecis=true;
+const ox=60, oy=600;
+
+let A={x:2,y:3,c:"blue",n:"A"};
+let B={x:7,y:6,c:"red",n:"B"};
+let drag=null;
+
+function prec(){return parseFloat(document.getElementById("precision").value);}
+
+function toggleMode(){
+ modePrecis=!modePrecis;
+ document.getElementById("modeBtn").innerText=
+ "Mode précis : "+(modePrecis?"ACTIVÉ":"DÉSACTIVÉ");
+}
+
+function toCanvas(x,y){return {x:ox+x*zoom,y:oy-y*zoom};}
+function toCoord(px,py){return {x:(px-ox)/zoom,y:(oy-py)/zoom};}
+
+function grille(){
+ let p=prec();
+ ctx.strokeStyle="#eee";
+ for(let x=ox;x<canvas.width;x+=zoom*p){
+   ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvas.height);ctx.stroke();
+ }
+ for(let y=oy;y>0;y-=zoom*p){
+   ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvas.width,y);ctx.stroke();
+ }
+
+ ctx.strokeStyle="#bbb";
+ for(let x=ox;x<canvas.width;x+=zoom){
+   ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvas.height);ctx.stroke();
+ }
+ for(let y=oy;y>0;y-=zoom){
+   ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvas.width,y);ctx.stroke();
+ }
+}
+
+function point(P){
+ let c=toCanvas(P.x,P.y);
+ ctx.beginPath();
+ ctx.arc(c.x,c.y,10,0,Math.PI*2);
+ ctx.fillStyle=P.c;
+ ctx.fill();
+ ctx.fillStyle="black";
+ ctx.fillText(`${P.n} (${P.x.toFixed(2)} ; ${P.y.toFixed(2)})`,c.x+15,c.y-10);
+}
+
+function dessiner(){
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+ grille();
+
+ ctx.strokeStyle="black";
+ ctx.beginPath();ctx.moveTo(ox,oy);ctx.lineTo(canvas.width,oy);ctx.stroke();
+ ctx.beginPath();ctx.moveTo(ox,oy);ctx.lineTo(ox,0);ctx.stroke();
+
+ let a=toCanvas(A.x,A.y), b=toCanvas(B.x,B.y);
+ ctx.strokeStyle="green";
+ ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+
+ point(A); point(B);
+}
+
+canvas.onmousedown=e=>{
+ let r=canvas.getBoundingClientRect();
+ let mx=e.clientX-r.left,my=e.clientY-r.top;
+ [A,B].forEach(P=>{
+  let c=toCanvas(P.x,P.y);
+  if(Math.hypot(mx-c.x,my-c.y)<15) drag=P;
+ });
+};
+
+canvas.onmousemove=e=>{
+ if(!drag) return;
+ let r=canvas.getBoundingClientRect();
+ let c=toCoord(e.clientX-r.left,e.clientY-r.top);
+
+ if(modePrecis){
+   drag.x=c.x; drag.y=c.y;
+ }else{
+   let p=prec();
+   drag.x=Math.round(c.x/p)*p;
+   drag.y=Math.round(c.y/p)*p;
+ }
+ dessiner();
+};
+
+canvas.onmouseup=()=>drag=null;
+canvas.onmouseleave=()=>drag=null;
+
+function calculer(){
+ let dx=B.x-A.x;
+ let dy=B.y-A.y;
+ let d=Math.sqrt(dx*dx+dy*dy);
+
+ document.getElementById("resultat").innerHTML=`
+ <h2>Calcul détaillé</h2>
+ <p>A = (${A.x.toFixed(2)} ; ${A.y.toFixed(2)})</p>
+ <p>B = (${B.x.toFixed(2)} ; ${B.y.toFixed(2)})</p>
+ <p>Δx = ${dx.toFixed(2)}</p>
+ <p>Δy = ${dy.toFixed(2)}</p>
+ <p>d² = Δx² + Δy²</p>
+ <p>d² = ${dx.toFixed(2)}² + ${dy.toFixed(2)}²</p>
+ <p>d² = ${(dx*dx).toFixed(4)} + ${(dy*dy).toFixed(4)}</p>
+ <p>d² = ${((dx*dx)+(dy*dy)).toFixed(4)}</p>
+ <h3>Distance AB = ${d.toFixed(4)}</h3>`;
+}
+
+dessiner();
+</script>
+</body>
+</html>
