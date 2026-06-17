@@ -2,189 +2,170 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="ouverture.css">
     <title>Ouverture de fichier</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f4f4f4;
+            padding:20px;
+        }
+        main{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            width:600px;
+            margin:auto;
+        }
+        select, button{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+        }
+    </style>
 </head>
+
 <body>
-    <main>
-        <h2>Choisissez un fichier :</h2>
 
-     <select id="fichier">
+<main>
 
-    <!-- 🌐 PROJETS WEB -->
-    <optgroup label="🌐 Projets Web">
-        <option value="HTML:site_agence_photographie/site_agence_photographie.html">Site agence photographie</option>
-        <option value="CSS:site_agence_photographie/site_agence_photographie.css">Site agence photographie (CSS)</option>
+<h2>Choisissez un fichier :</h2>
 
-        <option value="HTML:site_web_amélioré/site_web_amélioré.html">Site web amélioré</option>
-        <option value="CSS:site_web_amélioré/site_web_amélioré.css">Site web amélioré (CSS)</option>
+<select id="fichier">
+
+    <!-- 🌐 SITE PRINCIPAL -->
+    <optgroup label="🌐 Site principal">
+        <option value="WEB:https://emerick447.github.io/tim-eme/">Site web</option>
+        <option value="WEB:https://github.com/Emerick447/tim-eme">GitHub</option>
+    </optgroup>
+
+    <!-- 🌐 SITES WEB -->
+    <optgroup label="🌐 Sites web">
+        <option value="HTML:site_agence_photographie/site_agence_photographie.html">Site agence photo</option>
+        <option value="CSS:site_agence_photographie/site_agence_photographie.css">CSS agence photo</option>
+
+        <option value="HTML:site_web_amélioré/site_web_amélioré.html">Site amélioré</option>
+        <option value="CSS:site_web_amélioré/site_web_amélioré.css">CSS amélioré</option>
     </optgroup>
 
     <!-- 🎬 INTERFACES -->
     <optgroup label="🎬 Interfaces">
         <option value="HTML:Netflix/Netflix.html">Netflix</option>
-        <option value="CSS:Netflix/Netflix.css">Netflix (CSS)</option>
+        <option value="CSS:Netflix/Netflix.css">Netflix CSS</option>
 
-        <option value="HTML:page de connexion/Page_de_connexion.html">Page de connexion</option>
-        <option value="CSS:page de connexion/style.css">Page de connexion (CSS)</option>
+        <option value="HTML:page de connexion/Page_de_connexion.html">Connexion</option>
+        <option value="CSS:page de connexion/style.css">Connexion CSS</option>
     </optgroup>
 
     <!-- 🧪 APPRENTISSAGE -->
     <optgroup label="🧪 Apprentissage">
-        <option value="HTML:ma_page_web2/ma_page_web2.html">Ma page web 2</option>
-
-        <option value="HTML:test HTML_CSS/test html.html">Test HTML/CSS</option>
+        <option value="HTML:ma_page_web2/ma_page_web2.html">Page web 2</option>
+        <option value="HTML:test HTML_CSS/test html.html">Test HTML</option>
         <option value="CSS:test HTML_CSS/test css.css">Test CSS</option>
-
-        <option value="HTML:leçon 1 HTML et CSS/leçon 1 HTML et CSS.html">Leçon HTML & CSS</option>
+        <option value="HTML:leçon 1 HTML et CSS/leçon 1 HTML et CSS.html">Leçon HTML/CSS</option>
     </optgroup>
 
     <!-- 🎨 PROJETS -->
     <optgroup label="🎨 Projets">
         <option value="HTML:TROLL/troll.html">Troll</option>
-        <option value="CSS:TROLL/troll.css">Troll (CSS)</option>
+        <option value="CSS:TROLL/troll.css">Troll CSS</option>
 
         <option value="HTML:i_carrotte/i_carotte.html">i_carotte</option>
-        <option value="CSS:i_carrotte/i_carotte.css">i_carotte (CSS)</option>
-        <option value="IMG:i_carrotte/carotte-removebg-preview.png">i_carotte (image)</option>
+        <option value="CSS:i_carrotte/i_carotte.css">i_carotte CSS</option>
+        <option value="IMG:i_carrotte/carotte-removebg-preview.png">i_carotte image</option>
 
-        <option value="HTML:louise attaque/index.html">Louise Attaque</option>
-        <option value="CSS:louise attaque/style.css">Louise Attaque (CSS)</option>
-        <option value="IMG:louise attaque/Icone.png">Louise Attaque (icon)</option>
+        <option value="HTML:louise attaque/index.html">Louise attaque</option>
+        <option value="CSS:louise attaque/style.css">Louise CSS</option>
     </optgroup>
 
-    <!-- ⚙️ JS / TECH -->
-    <optgroup label="⚙️ JavaScript & Tech">
-        <option value="HTML:jsDOM/jsDOM.html">jsDOM</option>
-        <option value="CSS:jsDOM/jsDOM.css">jsDOM (CSS)</option>
-        <option value="JAVA:jsDOM/jsDOM.js">jsDOM (JS)</option>
+    <!-- ⚙️ JS -->
+    <optgroup label="⚙️ JavaScript">
+        <option value="HTML:jsDOM/jsDOM.html">jsDOM HTML</option>
+        <option value="CSS:jsDOM/jsDOM.css">jsDOM CSS</option>
+        <option value="JAVA:jsDOM/jsDOM.js">jsDOM JS</option>
     </optgroup>
 
-    <!-- 📚 DIVERS -->
-    <optgroup label="📚 Divers">
+    <!-- 📄 PAGES SIMPLES -->
+    <optgroup label="📄 Pages simples">
         <option value="HTML:sans CSS/formulaire.html">Formulaire</option>
-        <option value="HTML:sans CSS/les insectes.html">Les insectes</option>
+        <option value="HTML:sans CSS/les insectes.html">Insectes</option>
         <option value="HTML:sans CSS/anniversaire_maman.html">Anniversaire maman</option>
+        <option value="HTML:sans CSS/index.html">Question importante</option>
     </optgroup>
 
-    <!-- 🎵 MULTIMÉDIA -->
-    <optgroup label="🎵 Multimédia">
+    <!-- 🐍 PYTHON -->
+    <optgroup label="🐍 Python">
+        <option value="PYTHON:Pythons/Suites/script.py">Script 1</option>
+        <option value="PYTHON:Pythons/Suites/script 2.py">Script 2</option>
+        <option value="PYTHON:Pythons/Degrés Celsus degrés farhenheit.py">Conversion °C/°F</option>
+    </optgroup>
+
+    <!-- 🎵 AUDIO -->
+    <optgroup label="🎵 Audio">
         <option value="MP3:TROLL/miaw-miaw-miaw.mp3">Audio troll</option>
     </optgroup>
 
-    <!-- 💻 APPLICATIONS -->
+    <!-- 💻 APPS -->
     <optgroup label="💻 Applications">
-        <option value="APP:APPS/EXE/Assistant Vocal.exe">Assistant Vocal (EXE)</option>
-        <option value="PYTHON:APPS/PY/Assistant Vocal.py">Assistant Vocal (Python)</option>
+        <option value="APP:APPS/EXE/Assistant Vocal.exe">Assistant EXE</option>
+        <option value="PYTHON:APPS/PY/Assistant Vocal.py">Assistant PY</option>
     </optgroup>
 
-    <!-- 🌍 WEB -->
-    <optgroup label="🌍 Liens Web">
-        <option value="WEB:https://emerick447.github.io/tim-eme/">Site principal</option>
-        <option value="WEB:https://github.com/Emerick447/tim-eme">Dépôt GitHub</option>
+    <!-- 🖼 IMAGES -->
+    <optgroup label="🖼 Images">
+        <option value="IMG:IMG/71d84da1-ebdb-49a6-a1e2-75936c03475f.avif">Image 1</option>
+        <option value="IMG:IMG/image de tim.jpg">Image Tim</option>
     </optgroup>
 
 </select>
 
-        <br><br>
+<br>
 
-        <button onclick="acces()">Ouvrir</button>
+<button onclick="acces()">Ouvrir</button>
 
-        <p id="resultat"></p>
-    </main>
-    <script>
+<p id="resultat"></p>
 
-        function HTML(fichier) {
+</main>
+
+<script>
+
+function acces() {
+
+    let choix = document.getElementById("fichier").value;
+
+    let pos = choix.indexOf(":");
+    let type = choix.substring(0, pos);
+    let fichier = choix.substring(pos + 1);
+
+    document.getElementById("resultat").innerText =
+        "Ouverture : " + fichier;
+
+    switch(type){
+
+        case "HTML":
+        case "CSS":
+        case "JAVA":
+        case "IMG":
+        case "MP3":
+        case "APP":
+            window.open(fichier, "_blank");
+            break;
+
+        case "PYTHON":
+            window.open(fichier, "_blank");
+            window.open("https://console.basthon.fr/", "_blank");
+            break;
+
+        case "WEB":
+            window.open(fichier, "_blank");
+            break;
+
+        default:
             document.getElementById("resultat").innerText =
-                "Ouverture HTML : " + fichier;
-		window.open(fichier);
-        }
+                "Type inconnu";
+    }
+}
 
-        function PYTHON(fichier) {
-            document.getElementById("resultat").innerText =
-                "Ouverture Python : " + fichier;
-		window.open(fichier);
-        window.open('https://console.basthon.fr/');
-        }
+</script>
 
-        function JAVA(fichier) {
-            document.getElementById("resultat").innerText =
-                "Ouverture Java : " + fichier;
-		window.open(fichier);
-        }
-
-        function CSS(fichier) {
-            document.getElementById("resultat").innerText =
-                "Ouverture CSS : " + fichier;
-		window.open(fichier);
-        }
-
-        function IMG(fichier) {
-            document.getElementById("resultat").innerText =
-                "Ouverture Image : " + fichier;
-		window.open(fichier);
-        }
-
-        function APP(fichier) {
-            document.getElementById("resultat").innerText =
-                "Ouverture Application : " + fichier;
-		window.open(fichier);
-        }
-        function MP3(fichier) {
-            document.getElementById("resultat").innerText =
-                "Ouverture Fichier MP3 : " + fichier;
-		window.open(fichier);
-        }
-
-        function WEB(fichier) {
-            document.getElementById("resultat").innerText =
-                "Ouverture lien web : " + fichier;
-		window.open(fichier);
-        }
-
-    function acces() {
-
-		let choix = document.getElementById("fichier").value;
-	
-	    let pos = choix.indexOf(":");
-	    let type = choix.substring(0, pos);
-	    let fichier = choix.substring(pos + 1);
-	
-	    document.getElementById("resultat").innerText =
-	        "Ouverture : " + fichier;
-	
-	    switch(type){
-	
-	        case "HTML":
-	        case "CSS":
-	        case "JAVA":
-	        case "IMG":
-	        case "MP3":
-	        case "APP":
-	            window.open(fichier, "_blank");
-	            break;
-	
-	        case "PYTHON":
-	            window.open(fichier, "_blank");
-	            window.open("https://console.basthon.fr/", "_blank");
-	            break;
-	
-	        case "WEB":
-	            window.open(fichier, "_blank");
-	            break;
-	
-	        default:
-	            document.getElementById("resultat").innerText =
-	                "Type inconnu";
-	    }
-	}
-
-    </script>
-    <br>
-    <br>
-    <br>
-    <a href="https://emerick447.github.io/tim-eme/">Web page</a>
-    <a href="https://github.com/Emerick447/tim-eme">Web fichiers</a>
-    
 </body>
 </html>
